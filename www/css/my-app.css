@@ -74,3 +74,8 @@ a {
 .panel .list-block ul li .item-content .item-inner .item-title a {
   color: #FFF;
 }
+div[data-page=contato] .page-content .content-block i {
+  position: relative;
+  top: 6px;
+  margin: 0 10px;
+}

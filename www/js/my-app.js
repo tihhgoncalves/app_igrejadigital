@@ -62,6 +62,17 @@ $$(document).on('click', '#settings', function (e) {
 /* Carrega Dados da Igreja */
 function loader_church(){
     $$('.church-name').text(church.name);
+    $$('.church-phone').text(church.phone);
+    $$('.church-phone-full').text(church.phonefull);
+    $$('a.church-phone, a.church-phone-full').attr('href', 'tel:' + church.phonefull);
+    $$('.church-mail').text(church.mail);
+    ('a.church-mail').attr('href', 'mailto:' + church.mail);
+
+  $$('.panel-left a').on('click', function(){
+    myApp.closePanel();
+    console.log('123');
+  });
+
 }
 
 $$(document).on('deviceready', function() {
@@ -69,4 +80,6 @@ $$(document).on('deviceready', function() {
 })
 $$(document).on('pageInit', function (e) {
     loader_church();
+
+
 })
