@@ -1,0 +1,13 @@
+{
+  "name": "br.com.taticadesucesso.igrejadigital",
+  "version": "1.0.0",
+  "displayName": "app_igrejadigital",
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {
+    "cordova-android": "^7.1.4"
+  }
+}
