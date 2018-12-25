@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="br.com.taticadesucesso.igrejadigital" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>app_igrejadigital</name>
+    <name>IELBC Comunidade</name>
     <description>
-        A basic Framework7 template for PhoneGap.
+        App oficial da comunidade IELBC (Igreja Evangélica Livre de Balneário Camboriu).
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="contato@taticadesucesso.com.br" href="http://www.taticadesucesso.com.br">
+        Time Tática de Sucesso
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -25,7 +25,7 @@
         <preference name="BackupWebStorage" value="none" />
     </platform>
     <preference name="DisallowOverscroll" value="true" />
-    <engine name="android" spec="^7.1.4" />
+    <engine name="android" spec="7.1.4" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" spec="~1.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
