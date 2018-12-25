@@ -9,13 +9,18 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-console": {},
-      "cordova-plugin-statusbar": {}
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-screen-orientation": {}
     }
   },
   "dependencies": {
     "cordova-android": "7.1.4",
     "cordova-plugin-console": "~1.0.1",
+    "cordova-plugin-screen-orientation": "3.0.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "~1.0.1",
-    "cordova-plugin-whitelist": "~1.2.0"
+    "cordova-plugin-whitelist": "~1.2.0",
+    "es6-promise-plugin": "4.2.2"
   }
 }
