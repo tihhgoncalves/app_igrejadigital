@@ -13,9 +13,9 @@
     }
   },
   "dependencies": {
-    "cordova-android": "^7.1.4",
-    "cordova-plugin-whitelist": "~1.2.0",
+    "cordova-android": "7.1.4",
     "cordova-plugin-console": "~1.0.1",
-    "cordova-plugin-statusbar": "~1.0.1"
+    "cordova-plugin-statusbar": "~1.0.1",
+    "cordova-plugin-whitelist": "~1.2.0"
   }
 }
