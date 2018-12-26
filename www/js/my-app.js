@@ -1,20 +1,16 @@
-// Initialize app
 var myApp = new Framework7();
-
-
-// If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
 
-// Add view
+var app_status;
+
 var mainView = myApp.addView('.view-main', {
     // Because we want to use dynamic navbar, we need to enable it for this view:
     dynamicNavbar: true
 });
 
-// Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-    console.log("Device is ready!");
-    //loader_church();
+  register_log('App aberto.');
+  mainView.hideToolbar();
 });
 
 
@@ -61,25 +57,67 @@ $$(document).on('click', '#settings', function (e) {
 
 /* Carrega Dados da Igreja */
 function loader_church(){
-    $$('.church-name').text(church.name);
-    $$('.church-phone').text(church.phone);
-    $$('.church-phone-full').text(church.phonefull);
-    $$('a.church-phone, a.church-phone-full').attr('href', 'tel:' + church.phonefull);
-    $$('.church-mail').text(church.mail);
-    ('a.church-mail').attr('href', 'mailto:' + church.mail);
 
-  $$('.panel-left a').on('click', function(){
+  $$('.church-name').text(church.name);
+  $$('.church-phone').text(church.phone);
+  $$('.church-phone-full').text(church.phonefull);
+  $$('a.church-phone, a.church-phone-full').attr('href', 'tel:' + church.phonefull);
+  $$('.church-mail').text(church.mail);
+  $$('a.church-mail').attr('href', 'mailto:' + church.mail);
+
+  $$('.church-administrator-name').text(church.administrator.name);
+  $$('.church-administrator-mail').text(church.administrator.mail);
+  $$('a.church-administrator-mail').attr('href', 'mailto:' + church.administrator.mail);
+  $$('.church-administrator-phone').text(church.administrator.phone);
+  $$('.church-administrator-phone-full').text(church.administrator.phonefull);
+  $$('a.church-administrator-phone, a.church-administrator-phone-full').attr('href', 'tel:' + church.administrator.phonefull);
+
+  $$('.server-access-lasttime').text(localStorage.getItem('igrejadigital_json_lasttime'));
+
+  $$('.panel .list-block a').on('click', function(){
     myApp.closePanel();
-    console.log('123');
   });
 
 }
 
+/* Parâmetros Default */
 $$(document).on('deviceready', function() {
-    loader_church();
+
+  if(localStorage.getItem('igrejadigital_json_lasttime') == null)
+    localStorage.setItem('igrejadigital_json_lasttime', 'nunca');
+
+  if(localStorage.getItem('igrejadigital_json_data') == null)
+    localStorage.setItem('igrejadigital_json_data', {});
+
+})
+
+$$(document).on('deviceready', function() {
+
+  app_sync();
+
+  setInterval(function(){
+    register_log('Sincronizando (a cada 5min)');
+    app_sync();
+  }, 150000);//a cada 5min
+
+  $$('a.status-refresh').click(function(){
+
+    myApp.showPreloader('Tentando reconectar...');
+
+    app_sync(function(){
+
+      setTimeout(function(){
+        myApp.hidePreloader();
+      }, 1000);
+    });
+
+
+
+  });
+
+  loader_church();
 })
 $$(document).on('pageInit', function (e) {
     loader_church();
-
-
 })
+

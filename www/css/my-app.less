@@ -1,12 +1,19 @@
 @import "../church/church";
 @import "functions";
 
+@cor-azul: #0275d8;
+@cor-vermelho: #d9534f;
+@cor-verde: #5cb85c;
+@cor-azul-claro: #5bc0de;
+@cor-laranja: #d9534f;
+@cor-preto: #292b2c;
+@cor-branco: #f7f7f7;
 
 .statusbar-overlay {
   background: #000000;
 }
 
-/* Tamanho de �cones .f7-icons  */
+/* Tamanho de ícones .f7-icons  */
 i.size-22 { font-size: 22px }
 i.size-25 { font-size: 25px }
 i.size-29 { font-size: 29px }
@@ -15,6 +22,14 @@ i.size-50 { font-size: 50px }
 a{
   color: @church-cor-principal;
 }
+
+hr{
+  border: 0;
+  border-bottom: 1px solid @cor-branco;
+  .fnc_transparencia(50%);
+}
+
+
 
 .f7-icons, .framework7-icons{
   color: @church-cor-principal;
@@ -39,6 +54,14 @@ a{
       opacity: .15;
       content: "";
       z-index: -1;
+    }
+
+  }
+
+  &.panel-right {
+
+    p, h4, a {
+      color: @cor-branco;
     }
 
   }
@@ -71,13 +94,15 @@ a{
 
   .list-block{
 
-
-
     ul{
       background: none;
       color: #FFF;
 
       li {
+
+        &.is-offline{
+          display: none!important;
+        }
 
 
         .item-content{
@@ -88,7 +113,6 @@ a{
               color: #FFF;
               font-size: 20px;
             }
-
 
           }
 
@@ -114,6 +138,30 @@ a{
 
 }
 
+.pages{
+
+  h3{
+
+    i{
+      position: relative;
+      top: 3px;
+      font-size: 25px;
+      margin: 5px;
+    }
+
+  }
+
+
+  div[data-page=offline]{
+    h3{
+      i{
+        color: @cor-vermelho;
+      }
+    }
+  }
+
+}
+
 div[data-page=contato]{
 
   .page-content{
@@ -127,7 +175,6 @@ div[data-page=contato]{
     }
 
   }
-
 
 
 }

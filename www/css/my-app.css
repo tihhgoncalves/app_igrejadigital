@@ -2,7 +2,7 @@
 .statusbar-overlay {
   background: #000000;
 }
-/* Tamanho de �cones .f7-icons  */
+/* Tamanho de ícones .f7-icons  */
 i.size-22 {
   font-size: 22px;
 }
@@ -17,6 +17,13 @@ i.size-50 {
 }
 a {
   color: #238c67;
+}
+hr {
+  border: 0;
+  border-bottom: 1px solid #f7f7f7;
+  opacity: 0.5%;
+  -moz-opacity: 0.5%;
+  filter: alpha(opacity=50%);
 }
 .f7-icons,
 .framework7-icons {
@@ -38,6 +45,11 @@ a {
   opacity: 0.15;
   content: "";
   z-index: -1;
+}
+.panel.panel-right p,
+.panel.panel-right h4,
+.panel.panel-right a {
+  color: #f7f7f7;
 }
 .panel #logo {
   background-color: #FFF;
@@ -64,6 +76,9 @@ a {
   background: none;
   color: #FFF;
 }
+.panel .list-block ul li.is-offline {
+  display: none!important;
+}
 .panel .list-block ul li .item-content .item-media i {
   color: #FFF;
   font-size: 20px;
@@ -73,6 +88,15 @@ a {
 }
 .panel .list-block ul li .item-content .item-inner .item-title a {
   color: #FFF;
+}
+.pages h3 i {
+  position: relative;
+  top: 3px;
+  font-size: 25px;
+  margin: 5px;
+}
+.pages div[data-page=offline] h3 i {
+  color: #d9534f;
 }
 div[data-page=contato] .page-content .content-block i {
   position: relative;

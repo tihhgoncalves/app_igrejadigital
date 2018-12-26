@@ -10,6 +10,12 @@
     "cordova-plugin-console": {
       "PACKAGE_NAME": "br.com.taticadesucesso.igrejadigital"
     },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "br.com.taticadesucesso.igrejadigital"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "br.com.taticadesucesso.igrejadigital"
+    },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "br.com.taticadesucesso.igrejadigital"
     },
@@ -17,5 +23,9 @@
       "PACKAGE_NAME": "br.com.taticadesucesso.igrejadigital"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "br.com.taticadesucesso.igrejadigital"
+    }
+  }
 }

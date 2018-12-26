@@ -21,6 +21,7 @@
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "~1.0.1",
     "cordova-plugin-whitelist": "~1.2.0",
-    "es6-promise-plugin": "4.2.2"
+    "es6-promise-plugin": "4.2.2",
+    "less": "^3.9.0"
   }
 }
